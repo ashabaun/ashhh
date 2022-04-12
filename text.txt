@@ -1,2 +1,266 @@
 Lorem Ipsum
 piu
+➜  ~ cd Desktop
+➜  Desktop mkdir machin
+➜  Desktop cd poop
+➜  poop git unit
+git: 'unit' is not a git command. See 'git --help'.
+
+The most similar command is
+	init
+➜  poop git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/Asha/Desktop/poop/.git/
+➜  poop git:(master) mkdir ashhh
+➜  poop git:(master) rm
+usage: rm [-f | -i] [-dPRrvW] file ...
+       unlink file
+➜  poop git:(master) rm -rf .git
+➜  poop cd ashhh
+➜  ashhh git init
+hint: Using 'master' as the name for the initial branch. This default branch name
+hint: is subject to change. To configure the initial branch name to use in all
+hint: of your new repositories, which will suppress this warning, call:
+hint:
+hint: 	git config --global init.defaultBranch <name>
+hint:
+hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+hint: 'development'. The just-created branch can be renamed via this command:
+hint:
+hint: 	git branch -m <name>
+Initialized empty Git repository in /Users/Asha/Desktop/poop/ashhh/.git/
+➜  ashhh git:(master) echo "Lorem Ipsum" >> text.txt
+➜  ashhh git:(master) ✗ ls
+text.txt
+➜  ashhh git:(master) ✗ cat text.txt
+Lorem Ipsum
+➜  ashhh git:(master) ✗ ls
+text.txt
+➜  ashhh git:(master) ✗ git status
+On branch master
+
+No commits yet
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	text.txt
+
+nothing added to commit but untracked files present (use "git add" to track)
+➜  ashhh git:(master) ✗ git add text.txt
+➜  ashhh git:(master) ✗ git status
+On branch master
+
+No commits yet
+
+Changes to be committed:
+  (use "git rm --cached <file>..." to unstage)
+	new file:   text.txt
+
+➜  ashhh git:(master) ✗ git commit
+Aborting commit due to empty commit message.
+➜  ashhh git:(master) ✗ git commit -m "this is my first git commit."
+[master (root-commit) fc8d5ba] this is my first git commit.
+ Committer: Александра Баунова <Asha@MacBook-Air-Aleksandra.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+ create mode 100644 text.txt
+➜  ashhh git:(master) git remote add origin https://github.com/ashabaun/ashhh.git
+➜  ashhh git:(master) git push -u origin master
+Username for 'https://github.com': ashabaun
+Password for 'https://ashabaun@github.com':
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/ashabaun/ashhh.git/'
+➜  ashhh git:(master) cd
+➜  ~ mkdir .ssh
+➜  ~ cd .ssh
+➜  .ssh ssh-keygen -t rsa
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/Asha/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/Asha/.ssh/id_rsa.
+Your public key has been saved in /Users/Asha/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:IdqsqGgV8MwaFqKtW+EDC9aV6uUEkgbZbPKOgDRH8g0 Asha@MacBook-Air-Aleksandra.local
+The key's randomart image is:
++---[RSA 3072]----+
+|o=oE  .          |
+|+O*ooo           |
+|*=@.+.. .        |
+|*++B * . .       |
+|=B+.* o S        |
+|+.=+ o           |
+| oo..            |
+|oo               |
+|+                |
++----[SHA256]-----+
+➜  .ssh ls
+id_rsa     id_rsa.pub
+➜  .ssh cat
+^C
+➜  .ssh cat id_rsa
+-----BEGIN OPENSSH PRIVATE KEY-----
+b3BlbnNzaC1rZXktdjEAAAAABG5vbmUAAAAEbm9uZQAAAAAAAAABAAABlwAAAAdzc2gtcn
+NhAAAAAwEAAQAAAYEAsIxIikum4urVcSBvUHOFCK695rGYczI+ax7sTvbimuII4tUhdXxG
+a9WXMvMZ3DshPt7BP1ZEgrf3D0MER6/XPrJGs73IcKind6CJvHrWtTm7PT80seFvkS5XZG
+cd4WFMxtydMVmE4unKcCdYS+UfTIgMUjZtcDIvSN3E6ywKoQtq2N3NMgIZh1aL4N8Ad4Ni
+GkUcUB6b8bUiP+r6ZH9pv/VRJyVo8FLozr9qlgjo5WOsMLP2NQ6zotHl3p+w6He5i2lmOZ
+I7MBBZ59bCqcSpzqs5KxC2Uj51pJq07r897VG+4kzimcXYTJcjzdYZ4LyfTy0aI21h6NDb
+jlEyNNGGKxwDWhBcEKhbaaWeTmurukO5okT7EByI2PldghSu/+meQFBAn3y3guANQSDdy6
+JydAmDvGdcREtH8bwTr/S6ApM0sVbcOzNkR/XLWdoV2GUcXBUiUBd7EVcDiLwgdKaNZLTU
+jjH84pBThW5IMCo1JagFsRj9JvrtIKuIyUKFY5WtAAAFmDqEznc6hM53AAAAB3NzaC1yc2
+EAAAGBALCMSIpLpuLq1XEgb1BzhQiuveaxmHMyPmse7E724priCOLVIXV8RmvVlzLzGdw7
+IT7ewT9WRIK39w9DBEev1z6yRrO9yHCop3egibx61rU5uz0/NLHhb5EuV2RnHeFhTMbcnT
+FZhOLpynAnWEvlH0yIDFI2bXAyL0jdxOssCqELatjdzTICGYdWi+DfAHeDYhpFHFAem/G1
+Ij/q+mR/ab/1USclaPBS6M6/apYI6OVjrDCz9jUOs6LR5d6fsOh3uYtpZjmSOzAQWefWwq
+nEqc6rOSsQtlI+daSatO6/Pe1RvuJM4pnF2EyXI83WGeC8n08tGiNtYejQ245RMjTRhisc
+A1oQXBCoW2mlnk5rq7pDuaJE+xAciNj5XYIUrv/pnkBQQJ98t4LgDUEg3cuicnQJg7xnXE
+RLR/G8E6/0ugKTNLFW3DszZEf1y1naFdhlHFwVIlAXexFXA4i8IHSmjWS01I4x/OKQU4Vu
+SDAqNSWoBbEY/Sb67SCriMlChWOVrQAAAAMBAAEAAAGAVi9VZjXCNXpAUiZsUNDj+7YaPF
+ksO+gmMnL5Fx9MxiFcByfWWp0dX5z4X8XvNOSkuSVTH1FExq956zhjCX/cyt2KyEn4ZI7g
+mfSD6L/qurOBJUgKuF998Fi4DuqL2q9+JIIkNqglyAQrcA60+u/SFLFBmoy5ZhEJpj+k1s
+08Lxv8v/ufJS+DON9WD6OtfapkpMBiLvaSWC99lchnDdJpVG00fbC0hsViozMsnCujTgAX
+WfswUPxpUy22UrSQTxvKZ52mXZxlRnsNzz2fITnmnavBdqNAcUc00CYkuhcH0sBis3lUDJ
+xewZpySjzPdlljwRPytuTZZHEwmrjqF39BJu/CkVHKug07kvHRhaKyuaShZ6Uxsu2MPMPM
+YMpYLHIadhsSPd+oWAPZDfjxn8bxk5yC2V77Omze+0mKhsZ2zPgKu6MrBdQURl4exr91vf
+wXiY2esnnWRuKMSQpMhkWiMKdaNgHn4UboLs/tunwv2+A7BeXQbW5CGUGYsjJIO6V9AAAA
+wA6zsMfOZylsjtxgErODaIYH579vEJAb88o4zQ/WWrLJM70VLH8vzIhlcZ4Vxj3aapej9P
+83LBe4klNIADzNZK+5e+48eFbO8gTAUhAJj8qxyZTLXEJTnDxFPihr6vSEtiOUIa5cynVP
+B4CsFErDQ8RiAQ/b49jBwRdeYoEjLBX/YSSTw8JvnN3F82e4SRkVw2JivR9LpBVEzB9Qqu
+vzEZtTcJgS9BiFvqUmBV8bM/JyWIKCdc65ucmwDs1pxl6tQAAAAMEA1/33tI8g+dFycATE
+ZcOKvpO11tzDpqxpMnUls1xyssYqO47AHw4zPH98jX7mUmj6YHnd15bTRZHDae98ZvLisW
+OX5l5i6AlVnVVn8pArctBNYVR9u188mXgB8Iwa9vgV/GVjS+N9SAItzNSg+5T86KOfOSvz
+3FB8cF3l1yBZzdyfLpgsQ0/kgdWoKI94SorAEXQ5De1bEa4aGAyPst8qk3BJB7wRlCx0GH
+XAS5xZpt33nSyaN7mLMBj+HibfvOi/AAAAwQDRP+8xkl/oe2k88q1qy+9aErPvuB7Fh+8F
+Rna0ahFyH6xm0xIyQAooPXRWtnTloIQpWOvjToZu/YkcjUPjUdGOV3NTNImXbgPR+8IU7Z
+stomaYHycs2UdVHiSRV/viIf3be3o3ohuP1fNZG504U6vztUhFedUrs6HSrXAbYVaJTQ0j
+s2xzFz7gS81HX9khr8duBuxpDol0uhD20IEPmkS4d0sPbPdSyOg84y2GlQ5k1sEsBqVGb9
+5WvcBiw6wiEJMAAAAhQXNoYUBNYWNCb29rLUFpci1BbGVrc2FuZHJhLmxvY2FsAQI=
+-----END OPENSSH PRIVATE KEY-----
+➜  .ssh cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQCwjEiKS6bi6tVxIG9Qc4UIrr3msZhzMj5rHuxO9uKa4gji1SF1fEZr1Zcy8xncOyE+3sE/VkSCt/cPQwRHr9c+skazvchwqKd3oIm8eta1Obs9PzSx4W+RLldkZx3hYUzG3J0xWYTi6cpwJ1hL5R9MiAxSNm1wMi9I3cTrLAqhC2rY3c0yAhmHVovg3wB3g2IaRRxQHpvxtSI/6vpkf2m/9VEnJWjwUujOv2qWCOjlY6wws/Y1DrOi0eXen7Dod7mLaWY5kjswEFnn1sKpxKnOqzkrELZSPnWkmrTuvz3tUb7iTOKZxdhMlyPN1hngvJ9PLRojbWHo0NuOUTI00YYrHANaEFwQqFtppZ5Oa6u6Q7miRPsQHIjY+V2CFK7/6Z5AUECffLeC4A1BIN3LonJ0CYO8Z1xES0fxvBOv9LoCkzSxVtw7M2RH9ctZ2hXYZRxcFSJQF3sRVwOIvCB0po1ktNSOMfzikFOFbkgwKjUlqAWxGP0m+u0gq4jJQoVjla0= Asha@MacBook-Air-Aleksandra.local
+➜  .ssh cd ../poop
+cd: no such file or directory: ../poop
+➜  .ssh cd ../Desktop/poop/ashhh
+➜  ashhh git:(master) git push -u origin master
+Username for 'https://github.com': ashabaun
+Password for 'https://ashabaun@github.com':
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/ashabaun/ashhh.git/'
+➜  ashhh git:(master) cd
+➜  ~ cd .ssh
+➜  .ssh ls
+id_rsa     id_rsa.pub
+➜  .ssh rm id_rsa id_rsa.pub
+➜  .ssh ssh-keygen -t rsa -b 4096 -C "abaunsoft@gmail.com"
+Generating public/private rsa key pair.
+Enter file in which to save the key (/Users/Asha/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase):
+Enter same passphrase again:
+Your identification has been saved in /Users/Asha/.ssh/id_rsa.
+Your public key has been saved in /Users/Asha/.ssh/id_rsa.pub.
+The key fingerprint is:
+SHA256:vEgxlqhEnVHdI93K5PnSLf5stCUXlWFNANue5pyNJTU abaunsoft@gmail.com
+The key's randomart image is:
++---[RSA 4096]----+
+|  ...+.. o ....==|
+| .  o. .o = .o..o|
+|  . . =  = +. .Eo|
+| . . . +  =  . +.|
+|  .   . S  o .= o|
+|     . . .. +++*o|
+|      . .  o o==.|
+|            ..o  |
+|             oo  |
++----[SHA256]-----+
+➜  .ssh cat id_rsa.pub
+ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAACAQCqocgeTTn5EINNNvJeYeLFSYRlG+6eB5AUUS2CdFg81IdetWZF+8kkcLHoPTq1zUOUisPgJbHPWgIKRGSq9QzfSmH797M8RRXpxQW84xM63hjnpRzO0kwaPlsx63zNzwY3B49fl5pMbng9H2jcD1/3cs1x2SPqWdc1Kor6d5EspFpwsBteuEmsF5MQD+bYrlbmY3hckUgT4eSLZP8EqLdajsd7PAe2z5KkhBr+RMP/IwJJO1cHAq5ZuivrXIvT0jcAmBUwqibZcarHPdqZF0qEbZgcSGxvBhKsrpO+8Tk30Hn6NLcMHd7fX+BBTLmR7/DqqsYENDwdmnFuO+OJTaKCOyY9eOE0FCYXzFrPnd7W5iCDZ05Xe69GoMjl3gwnZRXO9eBy6USmiD8u9o+1w0RWU+z6K+dT6t1LS7/+tDfhu6kDlrCG4wbgaLRHO8VBeGcENXxNAGzDJuWnJzeUdGW6BNvTl7EPtz96UJhnS9LNzuz9rTAAnAUA2QibySfyrqAJgmx+YgJxQnwckQP2ZlOrw2R3l7Jl5n8egGpIPIpr9WCXSjmb4WC5gMtI7yxXYa8wpj8LZvhJyk6SORN63WYs1kAfQPEeNzNs44GBvipHUqndZnHWeBFe18Ivo4F5EHr4yGHMmLbukFTNXGW7SVNyxElMeCSnuSfbBmSNSn2Srw== abaunsoft@gmail.com
+➜  .ssh cd ../Desktop/poop/ashhh
+➜  ashhh git:(master) git push -u origin master
+Username for 'https://github.com': ashabaun
+Password for 'https://ashabaun@github.com':
+remote: Support for password authentication was removed on August 13, 2021. Please use a personal access token instead.
+remote: Please see https://github.blog/2020-12-15-token-authentication-requirements-for-git-operations/ for more information.
+fatal: Authentication failed for 'https://github.com/ashabaun/ashhh.git/'
+# This is Git's per-user configuration file.
+➜  ashhh git:(master) git push -u origin master
+fatal: unable to access 'https://github.com/ashabaun/ashhh.git/': LibreSSL SSL_read: SSL_ERROR_SYSCALL, errno 54
+➜  ashhh git:(master) git remote set-url origin git@github.com:ashabaun/ashhh.git
+
+➜  ashhh git:(master) git push -u origin master
+The authenticity of host 'github.com (140.82.121.3)' can't be established.
+ECDSA key fingerprint is SHA256:p2QAMXNIC1TJYWeIOttrVc98/R1BUFWu3/LiyKgUfQM.
+Are you sure you want to continue connecting (yes/no/[fingerprint])? y
+Please type 'yes', 'no' or the fingerprint: yes
+Warning: Permanently added 'github.com,140.82.121.3' (ECDSA) to the list of known hosts.
+Enumerating objects: 3, done.
+Counting objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 278 bytes | 92.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:ashabaun/ashhh.git
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+➜  ashhh git:(master) code .
+➜  ashhh git:(master) git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+nothing to commit, working tree clean
+➜  ashhh git:(master) git status
+On branch master
+Your branch is up to date with 'origin/master'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   text.txt
+
+no changes added to commit (use "git add" and/or "git commit -a")
+➜  ashhh git:(master) ✗ git add text.txt
+➜  ashhh git:(master) ✗ git commit -m "adding piu"
+[master d1ce1db] adding piu
+ Committer: Александра Баунова <Asha@MacBook-Air-Aleksandra.local>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 1 insertion(+)
+➜  ashhh git:(master) git config --global --edit
+➜  ashhh git:(master) git push
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Writing objects: 100% (3/3), 304 bytes | 304.00 KiB/s, done.
+Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:ashabaun/ashhh.git
+   fc8d5ba..d1ce1db  master -> master
+➜  ashhh git:(master)
